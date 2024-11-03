@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #fff;
+}
+
+.contenedor {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.contenedor-s {
+  width: 90%;
+  max-width: 400px; /* Limitar el ancho máximo */
+  height: auto; /* Permitir que se ajuste a su contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e218f;
+  border: 1px solid #5b1a1a;
+  border-radius: 20px; /* Bordes más suaves */
+  padding: 2rem; /* Añadir padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+.title {
+  font-size: 2.5rem; /* Ajustar el tamaño */
+  margin-bottom: 1.5rem; /* Reducir el margen */
+  color: #ffd700; /* Color dorado */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  text-align: center; /* Centrar el texto */
+}
+
+.input {
+  width: 100%; /* Usar todo el ancho del contenedor */
+  height: 3rem;
+  font-size: 1.2rem; /* Reducir el tamaño */
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #fff; /* Borde más visible */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  color: #fff; /* Texto blanco */
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffd700; /* Cambiar color del borde en foco */
+}
+
+.country {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.city {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem; /* Aumentar tamaño para mayor visibilidad */
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: #ffd700; /* Color dorado */
+}
+
+button {
+  width: 100%; /* Ampliar botón al ancho del contenedor */
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de escalado */
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+  font-weight: bold;
+  color: #ffd700; /* Color dorado */
+}
+
+/* Responsive design */
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .input {
+    width: 100%; /* Ampliar el input en pantallas pequeñas */
+  }
+
+  .title {
+    font-size: 2rem; /* Reducir el tamaño del título */
+  }
+
+  .temperature {
+    flex-direction: column; /* Cambiar a columna para los elementos de temperatura */
+    gap: 10px; /* Reducir el espacio entre los elementos */
+  }
+
+  .contenedor-s {
+    padding: 1rem; /* Agregar un poco de padding */
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 900px) {
+  .input {
+    width: 80%; /* Ajustar el input */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Ajustar el tamaño del título */
+  }
+
+  .temperature {
+    gap: 20px; /* Ajustar el espacio entre elementos */
+  }
+}
