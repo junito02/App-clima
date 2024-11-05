@@ -13,7 +13,6 @@ function App() {
       setSearch(inputValue);
     }
   };
-  const url = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     fetch(
